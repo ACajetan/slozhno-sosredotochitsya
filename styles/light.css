@@ -5,7 +5,7 @@
   --accent-color: #ff8dcb;
   --title-color: #ffc2e6;
   --shadow-color: #ff0070;
-  --bg-img: url(./images/cover-image-light.png);
+  --bg-img: url(../images/cover-image-light.png);
 }
 @media (prefers-color-scheme: light) {
   :root {
@@ -16,7 +16,7 @@
     --accent-color: #ff8dcb;
     --title-color: #ffc2e6;
     --shadow-color: #ff0070;
-    --bg-img: url(./images/cover-image-light.png);
+    --bg-img: url(../images/cover-image-light.png);
   }
 
   .header__rec-element {

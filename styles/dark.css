@@ -5,7 +5,7 @@
   --accent-color: #ff0070;
   --title-color: #db00ff;
   --shadow-color: #ff0070;
-  --bg-img: url(./images/cover-image-dark.png);
+  --bg-img: url(../images/cover-image-dark.png);
 }
 
 .header__theme-menu-button {
