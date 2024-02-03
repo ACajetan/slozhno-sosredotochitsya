@@ -3,10 +3,14 @@
   --bg-color: #fff1f7;
   --text-color: #353430;
   --accent-color: #ff8dcb;
+  --accent-color-rgba: rgba(50, 49, 45, 0.4);
   --title-color: #ffc2e6;
   --shadow-color: #ff0070;
   --bg-img: url(../images/cover-image-light.png);
 }
+
+/* До конца не понял стоит ли убирать отсюда, т.к. у меня сразу все ломается =(*/
+
 @media (prefers-color-scheme: light) {
   :root {
     --main-font: "IBM Plex mono";
@@ -14,6 +18,7 @@
     --heading-color: #353430;
     --text-color: #353430;
     --accent-color: #ff8dcb;
+    --accent-color-rgba: rgba(50, 49, 45, 0.4);
     --title-color: #ffc2e6;
     --shadow-color: #ff0070;
     --bg-img: url(../images/cover-image-light.png);
@@ -49,16 +54,8 @@
     border-left: 1px solid var(--text-color);
   }
 
-  .header__theme-menu-button:hover::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    outline: 1px solid var(--text-color);
-    opacity: 0.5;
-    box-sizing: border-box;
+  .header__theme-menu-button:hover {
+    outline: 1px solid var(--accent-color-rgba);
   }
 
   .section__title {
@@ -69,26 +66,12 @@
     color: var(--text-color);
   }
 
-  .link:hover::after {
-    content: "";
-    display: block;
-    height: 1px;
-    width: 100%;
-    background-color: var(--text-color);
-    position: absolute;
-    bottom: 0;
-    left: 0;
+  .link:hover {
+    border-bottom: 1px solid var(--text-color);
   }
 
-  .link:focus::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  .link:focus-visible {
     outline: 1px solid var(--text-color);
-    box-sizing: border-box;
   }
 
   .inside-card__decision-title {
@@ -101,93 +84,3 @@
     }
   }
 }
-
-.theme_light .header__rec-element {
-  display: none;
-}
-
-.theme_light .header__theme-menu-button {
-  color: var(--text-color);
-}
-
-.theme_light .header__theme-menu-button_active {
-  outline: 1px solid var(--text-color);
-}
-
-.theme_light .header__description-text {
-  color: var(--text-color);
-}
-
-.theme_light .title-style {
-  text-shadow: 4px 4px 0 var(--accent-color);
-}
-
-.theme_light .decorated-zone::before {
-  border-top: 1px solid var(--text-color);
-  border-right: 1px solid var(--text-color);
-}
-
-.theme_light .decorated-zone::after {
-  border-bottom: 1px solid var(--text-color);
-  border-left: 1px solid var(--text-color);
-}
-
-.theme_light .header__theme-menu-button:hover::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  outline: 1px solid var(--text-color);
-  opacity: 0.5;
-  box-sizing: border-box;
-}
-
-.theme_light .section__title {
-  color: var(--text-color);
-}
-
-.theme_light .inside-card__title {
-  color: var(--text-color);
-}
-
-.theme_light .link:hover::after {
-  content: "";
-  display: block;
-  height: 1px;
-  width: 100%;
-  background-color: var(--text-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-
-.theme_light .link:focus::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  outline: 1px solid var(--text-color);
-  box-sizing: border-box;
-}
-
-.theme_light .inside-card__decision-title {
-  color: var(--text-color);
-}
-
-@media screen and (min-width: 1024px) {
-  .theme_light .title-style {
-    text-shadow: 4px 4px 0 var(--shadow-color);
-  }
-}
-
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
-/* Остальные стили */
