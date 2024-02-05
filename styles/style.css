@@ -394,7 +394,6 @@
     grid-template-columns: repeat(3, auto);
     grid-template-rows: 192px 230px 318px;
     gap: 20px;
-    height: 823px;
   }
 
   .imges {
